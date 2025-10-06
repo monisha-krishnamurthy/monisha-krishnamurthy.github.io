@@ -1,24 +1,224 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Welcome to My Website!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monisha Krishnamurthy — Software Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fafafa;
-      color: #333;
-      text-align: center;
-      padding-top: 100px;
+    html { scroll-behavior: smooth; }
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 2rem;
     }
-    h1 {
-      font-size: 2.5em;
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    video.background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.35;
+      filter: brightness(0.5);
     }
   </style>
 </head>
-<body>
-  <h1>Hello — this is my GitHub Pages site!</h1>
-  <p>Built with GitHub Pages.</p>
+
+<body class="bg-black text-gray-200 font-sans relative overflow-x-hidden">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-black/60 backdrop-blur-md border-b border-gray-800 z-50">
+    <nav class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      <div class="font-semibold text-lg text-white">Monisha Krishnamurthy</div>
+      <div class="hidden md:flex space-x-8 text-sm">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#experience" class="hover:text-white">Experience</a>
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#education" class="hover:text-white">Education</a>
+        <a href="#leadership" class="hover:text-white">Leadership</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Video Background -->
+  <section id="hero" class="section text-center relative fade-in overflow-hidden">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="tech-bg.mp4" type="video/mp4" />
+      <!-- Replace with your own cinematic background video -->
+    </video>
+    <div class="relative z-10">
+      <h1 class="text-5xl md:text-6xl font-semibold mb-6 text-white drop-shadow-lg">
+        Crafting scalable systems with precision and impact.
+      </h1>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto drop-shadow">
+        Results-driven Software Developer with 3+ years of experience building
+        distributed, resilient backend systems using Spring Boot, Spring Cloud,
+        and microservices. Passionate about clean code, performance, and scalable architecture.
+      </p>
+      <div class="mt-10">
+        <a href="#about" class="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition">
+          Discover More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section bg-zinc-950 fade-in">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-semibold mb-6 text-white">About Me</h2>
+      <p class="text-gray-400 leading-relaxed">
+        I'm a Software Developer with hands-on experience in designing microservice-based architectures,
+        event-driven systems, and distributed applications. I’m currently pursuing my Master’s in Computer
+        Software Engineering at Arizona State University (graduating May 2026) and actively seeking full-time
+        Software Engineering roles in the U.S.
+      </p>
+      <div class="mt-8 flex justify-center space-x-6 text-gray-400">
+        <a href="mailto:monisha.jobs2025@gmail.com" class="hover:text-white">Email</a>
+        <a href="https://www.linkedin.com/in/monisha-murthy/" target="_blank" class="hover:text-white">LinkedIn</a>
+        <a href="https://github.com/monisha-krishnamurthy" target="_blank" class="hover:text-white">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section bg-black fade-in">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-semibold mb-10 text-white">Technical Skills</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-gray-300">
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-white">Programming</h3>
+          <p>Java, Python, C, C++, JavaScript, React JS, Angular</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-white">Databases</h3>
+          <p>PostgreSQL, MySQL, Redis, Spring Data JPA</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-white">Frameworks</h3>
+          <p>Spring Boot, Spring Cloud, REST APIs, OpenFeign</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-white">Messaging</h3>
+          <p>Apache Kafka, RabbitMQ</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-white">Dev Tools</h3>
+          <p>Jenkins, Maven, JIRA, Docker, GitHub, Tomcat, PCF</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-white">Project Management</h3>
+          <p>Agile, Atlassian Confluence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section bg-zinc-950 fade-in">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-semibold mb-10 text-white">Work Experience</h2>
+      <div class="space-y-8 text-left">
+        <div class="bg-zinc-900 rounded-2xl shadow-sm p-6 hover:bg-zinc-800 transition">
+          <h3 class="text-xl font-semibold text-white">Software Engineer — Hotel Maruthi Pvt Ltd</h3>
+          <p class="text-gray-500 text-sm mb-3">Dec 2020 – May 2022 & Nov 2022 – Jun 2024 | Bengaluru, India</p>
+          <ul class="list-disc list-inside text-gray-400 space-y-2">
+            <li>Modernized architecture from monolith to microservices using Spring Boot and Spring Cloud.</li>
+            <li>Developed services with PostgreSQL persistence and Redis caching for low-latency reads.</li>
+            <li>Integrated Eureka, Config Server, and Gateway for centralized configuration and routing.</li>
+            <li>Designed async workflows using RabbitMQ & Kafka to decouple booking and billing services.</li>
+            <li>Built Kafka pipelines for broadcasting booking and payment events, improving responsiveness.</li>
+            <li>Achieved 99.95% system uptime via service isolation and fault-tolerant messaging strategies.</li>
+          </ul>
+        </div>
+
+        <div class="bg-zinc-900 rounded-2xl shadow-sm p-6 hover:bg-zinc-800 transition">
+          <h3 class="text-xl font-semibold text-white">Software Developer — Appzera (OPC) Pvt Ltd</h3>
+          <p class="text-gray-500 text-sm mb-3">Jun 2022 – Oct 2022 | Bengaluru, India</p>
+          <ul class="list-disc list-inside text-gray-400 space-y-2">
+            <li>Enhanced healthcare system backends using Spring Boot and JPA.</li>
+            <li>Worked with architects on feature design, REST APIs, and deployment optimization.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section bg-black fade-in">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-semibold mb-10 text-white">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-zinc-900 rounded-2xl shadow-sm p-6 hover:bg-zinc-800 transition">
+          <h3 class="text-xl font-semibold text-white mb-2">AI Powered Resume Chatbot</h3>
+          <p class="text-gray-400 mb-3">Built a RAG-based chatbot using OpenAI, Hugging Face embeddings, and Vector DB for semantic career Q&A.</p>
+          <a href="https://monisha-portfolio-chatbot.streamlit.app/" target="_blank" class="text-blue-400 hover:underline">Live Demo</a>
+        </div>
+        <div class="bg-zinc-900 rounded-2xl shadow-sm p-6 hover:bg-zinc-800 transition">
+          <h3 class="text-xl font-semibold text-white mb-2">MintLang: A Custom Interpreted Language</h3>
+          <p class="text-gray-400 mb-3">Created a Java + ANTLR-based interpreted language with support for loops, conditionals, and type checking.</p>
+          <a href="https://github.com/monisha-krishnamurthy/mint" target="_blank" class="text-blue-400 hover:underline">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section bg-zinc-950 fade-in">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-semibold mb-8 text-white">Education</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium text-white">Arizona State University</h3>
+          <p class="text-gray-400">M.S. in Computer Software Engineering</p>
+          <p class="text-gray-500 text-sm">Aug 2024 – May 2026 | Tempe, AZ, USA</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium text-white">Bangalore Institute of Technology</h3>
+          <p class="text-gray-400">B.E. in Electronics and Communication</p>
+          <p class="text-gray-500 text-sm">Aug 2016 – Aug 2020 | Bengaluru, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section id="leadership" class="section bg-black fade-in">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-semibold mb-8 text-white">Leadership & Certifications</h2>
+      <ul class="text-gray-400 list-disc list-inside space-y-3 text-left max-w-2xl mx-auto">
+        <li>Elected Co-President of ASU’s Product Management Club (selected from 22 candidates).</li>
+        <li>Campus Ambassador at Robert Bosch Engineering (selected from 250+ peers at B.I.T).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-500 border-t border-gray-800">
+    <p>© 2025 Monisha Krishnamurthy • <a href="mailto:monisha.jobs2025@gmail.com" class="hover:underline text-gray-300">Contact</a></p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('fade-in');
+      });
+    });
+    document.querySelectorAll('.section').forEach(sec => observer.observe(sec));
+  </script>
+
 </body>
 </html>
