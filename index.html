@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monisha Krishnamurthy — Software Developer</title>
+  <title>Monisha Krishnamurthy — Product & Technology</title>
+  <meta name="description" content="Monisha Krishnamurthy: ASU software engineering graduate exploring product analyst and product operations roles. Product leadership, user problems, Python, SQL, and AI evaluation." />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+    #hero { min-height: 85vh; }
+    a:focus-visible { outline: 2px solid #93c5fd; outline-offset: 5px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .fade-in { animation: none !important; opacity: 1 !important; } }
     .section {
-      min-height: 100vh;
+      min-height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -40,37 +44,33 @@
 
   <!-- Navbar -->
   <header class="fixed top-0 left-0 w-full bg-black/60 backdrop-blur-md border-b border-gray-800 z-50">
-    <nav class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
-      <div class="font-semibold text-lg text-white">Monisha Krishnamurthy</div>
-      <div class="hidden md:flex space-x-8 text-sm">
+    <nav class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center gap-2 py-3">
+      <div class="font-semibold text-base text-white">Monisha Krishnamurthy</div>
+      <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs md:text-sm">
         <a href="#about" class="hover:text-white">About</a>
         <a href="#skills" class="hover:text-white">Skills</a>
         <a href="#experience" class="hover:text-white">Experience</a>
         <a href="#projects" class="hover:text-white">Projects</a>
         <a href="#education" class="hover:text-white">Education</a>
-        <a href="#leadership" class="hover:text-white">Leadership</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
       </div>
     </nav>
   </header>
 
   <!-- Hero Section with Video Background -->
   <section id="hero" class="section text-center relative fade-in overflow-hidden">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="tech-bg.mp4" type="video/mp4" />
-      <!-- Replace with your own cinematic background video -->
-    </video>
     <div class="relative z-10">
       <h1 class="text-5xl md:text-6xl font-semibold mb-6 text-white drop-shadow-lg">
-        Crafting scalable systems with precision and impact.
+        Curious about product.<br />Comfortable with code.
       </h1>
       <p class="text-lg text-gray-300 max-w-2xl mx-auto drop-shadow">
-        Results-driven Software Developer with 3+ years of experience building
-        distributed, resilient backend systems using Spring Boot, Spring Cloud,
-        and microservices. Passionate about clean code, performance, and scalable architecture.
+        I'm Monisha, an ASU software engineering master's graduate exploring product analyst
+        and product operations roles. I enjoy understanding user problems, making sense of
+        feedback, and working through the technical details behind better products.
       </p>
       <div class="mt-10">
-        <a href="#about" class="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition">
-          Discover More
+        <a href="#projects" class="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition">
+          Explore My Work
         </a>
       </div>
     </div>
@@ -81,97 +81,88 @@
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-4xl font-semibold mb-6 text-white">About Me</h2>
       <p class="text-gray-400 leading-relaxed">
-        I'm a Software Developer with hands-on experience in designing microservice-based architectures,
-        event-driven systems, and distributed applications. I’m currently pursuing my Master’s in Computer
-        Software Engineering at Arizona State University (graduating May 2026) and actively seeking full-time
-        Software Engineering roles in the U.S.
+        My experience spans Python backend development, product community leadership, and AI projects.
+        At ASU's Product Management Club, I used registration patterns and student feedback to help
+        shape programming, including an eight-week Product Fellowship. My technical background helps
+        me investigate issues and communicate with engineers. I'm interested in understanding how
+        people use products and turning what I learn into clear, actionable improvements.
       </p>
       <div class="mt-8 flex justify-center space-x-6 text-gray-400">
         <a href="mailto:monisha.jobs2025@gmail.com" class="hover:text-white">Email</a>
-        <a href="https://www.linkedin.com/in/monisha-murthy/" target="_blank" class="hover:text-white">LinkedIn</a>
-        <a href="https://github.com/monisha-krishnamurthy" target="_blank" class="hover:text-white">GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section bg-black fade-in">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl font-semibold mb-10 text-white">Technical Skills</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-gray-300">
-        <div>
-          <h3 class="font-semibold text-lg mb-2 text-white">Programming</h3>
-          <p>Java, Python, C, C++, JavaScript, React JS, Angular</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2 text-white">Databases</h3>
-          <p>PostgreSQL, MySQL, Redis, Spring Data JPA</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2 text-white">Frameworks</h3>
-          <p>Spring Boot, Spring Cloud, REST APIs, OpenFeign</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2 text-white">Messaging</h3>
-          <p>Apache Kafka, RabbitMQ</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2 text-white">Dev Tools</h3>
-          <p>Jenkins, Maven, JIRA, Docker, GitHub, Tomcat, PCF</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2 text-white">Project Management</h3>
-          <p>Agile, Atlassian Confluence</p>
-        </div>
+        <a href="https://www.linkedin.com/in/monisha-murthy/" target="_blank" rel="noopener noreferrer" class="hover:text-white">LinkedIn</a>
+        <a href="https://github.com/monisha-krishnamurthy" target="_blank" rel="noopener noreferrer" class="hover:text-white">GitHub</a>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="section bg-zinc-950 fade-in">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl font-semibold mb-10 text-white">Work Experience</h2>
-      <div class="space-y-8 text-left">
-        <div class="bg-zinc-900 rounded-2xl shadow-sm p-6 hover:bg-zinc-800 transition">
-          <h3 class="text-xl font-semibold text-white">Software Engineer — Hotel Maruthi Pvt Ltd</h3>
-          <p class="text-gray-500 text-sm mb-3">Dec 2020 – May 2022 & Nov 2022 – Jun 2024 | Bengaluru, India</p>
-          <ul class="list-disc list-inside text-gray-400 space-y-2">
-            <li>Modernized architecture from monolith to microservices using Spring Boot and Spring Cloud.</li>
-            <li>Developed services with PostgreSQL persistence and Redis caching for low-latency reads.</li>
-            <li>Integrated Eureka, Config Server, and Gateway for centralized configuration and routing.</li>
-            <li>Designed async workflows using RabbitMQ & Kafka to decouple booking and billing services.</li>
-            <li>Built Kafka pipelines for broadcasting booking and payment events, improving responsiveness.</li>
-            <li>Achieved 99.95% system uptime via service isolation and fault-tolerant messaging strategies.</li>
+  <section id="experience" class="section bg-zinc-950">
+    <div class="max-w-5xl mx-auto w-full">
+      <h2 class="text-4xl font-semibold mb-10 text-white">Experience &amp; Leadership</h2>
+      <div class="space-y-8 text-gray-300">
+        <article id="leadership" class="bg-zinc-900 rounded-2xl p-6 md:p-8">
+          <p class="text-blue-300 text-sm mb-2">PRODUCT LEADERSHIP · ARIZONA STATE UNIVERSITY</p>
+          <h3 class="text-2xl font-semibold text-white mb-4">Co-President, Product Management Club</h3>
+          <p class="mb-4">Led the leadership team in turning student interests into practical product programming.</p>
+          <ul class="list-disc pl-5 space-y-3">
+            <li>Analyzed registrations and attendance across 10–12 events over three semesters, identifying demand for applied product training and career guidance.</li>
+            <li>Led an eight-week Product Fellowship for eight teams of four to five students, spanning user research, strategy, success metrics, UX, MVP development, and final pitches.</li>
+            <li>Maintained a shared tracker of attendance, student feedback, and follow-up actions to prioritize programming improvements.</li>
+            <li>Coordinated a product-career talk with Yudi J attracting 200+ attendees and an AWS program with cloud workshops, recruiter guidance, and a mentored product simulation for 100+ attendees.</li>
           </ul>
-        </div>
-
-        <div class="bg-zinc-900 rounded-2xl shadow-sm p-6 hover:bg-zinc-800 transition">
-          <h3 class="text-xl font-semibold text-white">Software Developer — Appzera (OPC) Pvt Ltd</h3>
-          <p class="text-gray-500 text-sm mb-3">Jun 2022 – Oct 2022 | Bengaluru, India</p>
-          <ul class="list-disc list-inside text-gray-400 space-y-2">
-            <li>Enhanced healthcare system backends using Spring Boot and JPA.</li>
-            <li>Worked with architects on feature design, REST APIs, and deployment optimization.</li>
-          </ul>
-        </div>
+        </article>
+        <article class="bg-zinc-900 rounded-2xl p-6 md:p-8">
+          <p class="text-blue-300 text-sm mb-2">JUN–OCT 2022 · BENGALURU, INDIA</p>
+          <h3 class="text-2xl font-semibold text-white mb-4">Python Backend Developer, Appzera</h3>
+          <p>Worked on Python backend functionality for healthcare workflows, including error logging, monitoring, and bug tracking. Supported issue investigation and resolution through technical analysis and documentation.</p>
+        </article>
       </div>
     </div>
   </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section bg-black fade-in">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl font-semibold mb-10 text-white">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-zinc-900 rounded-2xl shadow-sm p-6 hover:bg-zinc-800 transition">
-          <h3 class="text-xl font-semibold text-white mb-2">AI Powered Resume Chatbot</h3>
-          <p class="text-gray-400 mb-3">Built a RAG-based chatbot using OpenAI, Hugging Face embeddings, and Vector DB for semantic career Q&A.</p>
-          <a href="https://monisha-portfolio-chatbot.streamlit.app/" target="_blank" class="text-blue-400 hover:underline">Live Demo</a>
-        </div>
-        <div class="bg-zinc-900 rounded-2xl shadow-sm p-6 hover:bg-zinc-800 transition">
-          <h3 class="text-xl font-semibold text-white mb-2">MintLang: A Custom Interpreted Language</h3>
-          <p class="text-gray-400 mb-3">Created a Java + ANTLR-based interpreted language with support for loops, conditionals, and type checking.</p>
-          <a href="https://github.com/monisha-krishnamurthy/mint" target="_blank" class="text-blue-400 hover:underline">View Project</a>
-        </div>
+  <section id="projects" class="section bg-black">
+    <div class="max-w-5xl mx-auto w-full">
+      <h2 class="text-4xl font-semibold mb-4 text-white">Selected Product &amp; AI Work</h2>
+      <p class="text-gray-400 mb-10">The problems, decisions, and deliverables behind my projects.</p>
+      <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+        <article class="bg-zinc-900 rounded-2xl p-7">
+          <p class="text-blue-300 text-sm mb-3">REQUIREMENTS &amp; DESIGN · TEAM PROJECT</p>
+          <h3 class="text-2xl font-semibold text-white mb-4">Making software estimates easier to explain</h3>
+          <p class="mb-4">Planning Poker Decision-Support Tool</p>
+          <p class="mb-4"><strong class="text-white">Problem:</strong> Inconsistent task sizing, group bias, and privacy concerns make planning difficult.</p>
+          <p class="mb-4"><strong class="text-white">Approach:</strong> Collaborated in a five-member team across three phases, refining stakeholder analysis into prioritized requirements and detailed design. Linked customer problems to proposed capabilities and validation scenarios.</p>
+          <p><strong class="text-white">Deliverable:</strong> A specification for historical-data estimation, search, and private developer records, with documented risks and trade-offs.</p>
+        </article>
+        <article class="bg-zinc-900 rounded-2xl p-7">
+          <p class="text-blue-300 text-sm mb-3">COMMUNITY SERVICES · CISCO THINQUBATOR 2021</p>
+          <h3 class="text-2xl font-semibold text-white mb-4">Helping Hands</h3>
+          <p class="mb-4"><strong class="text-white">Problem:</strong> Residents need convenient, reliable access to everyday assistance within their communities.</p>
+          <p class="mb-4"><strong class="text-white">Approach:</strong> Conceptualized and developed a two-sided platform connecting residents with neighborhood providers for groceries, medical assistance, childcare, and home services.</p>
+          <p><strong class="text-white">Recognition:</strong> Top 25 nationwide at Cisco Thinqubator, with a model pairing local support and flexible earning opportunities.</p>
+        </article>
+        <article class="bg-zinc-900 rounded-2xl p-7">
+          <p class="text-blue-300 text-sm mb-3">AI QUALITY · PYTHON · OPENAI · CHROMADB</p>
+          <h3 class="text-2xl font-semibold text-white mb-4">AI research with supporting evidence</h3>
+          <p class="mb-4">AI Research Agent for the Video Game Industry</p>
+          <p class="mb-4"><strong class="text-white">Problem:</strong> Research answers need relevant evidence, including when a local dataset cannot answer the question.</p>
+          <p class="mb-4"><strong class="text-white">Approach:</strong> Built a retrieval-based assistant with supporting citations and web-search fallback when retrieved evidence was insufficient.</p>
+          <p><strong class="text-white">Evaluation:</strong> Tested response grounding across 20+ queries and implemented confidence-based fallback logic to address unsupported answers.</p>
+        </article>
+        <article class="bg-zinc-900 rounded-2xl p-7">
+          <p class="text-blue-300 text-sm mb-3">CONVERSATIONAL EXPERIENCE · RAG</p>
+          <h3 class="text-2xl font-semibold text-white mb-4">AI Resume Chatbot</h3>
+          <p class="mb-5">Built a chatbot using OpenAI, Hugging Face embeddings, and a vector database to answer questions about my background through semantic retrieval.</p>
+          <a href="https://monisha-portfolio-chatbot.streamlit.app/" target="_blank" rel="noopener noreferrer" class="text-blue-300 underline">Explore the chatbot</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="section bg-zinc-950">
+    <div class="max-w-5xl mx-auto w-full">
+      <h2 class="text-4xl font-semibold mb-10 text-white">What I Bring</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-gray-300">
+        <div><h3 class="text-xl text-white font-semibold mb-3">Product thinking</h3><p>Feedback tracking, stakeholder analysis, requirements documentation, prioritization, Agile/Scrum.</p></div>
+        <div><h3 class="text-xl text-white font-semibold mb-3">Technical understanding</h3><p>Python, SQL, PostgreSQL, debugging, error logging, AI response evaluation.</p></div>
+        <div><h3 class="text-xl text-white font-semibold mb-3">Everyday tools</h3><p>Jira, Git, Postman, Notion, Excel, and Google Sheets.</p></div>
       </div>
     </div>
   </section>
@@ -195,20 +186,15 @@
     </div>
   </section>
 
-  <!-- Leadership -->
-  <section id="leadership" class="section bg-black fade-in">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-semibold mb-8 text-white">Leadership & Certifications</h2>
-      <ul class="text-gray-400 list-disc list-inside space-y-3 text-left max-w-2xl mx-auto">
-        <li>Elected Co-President of ASU’s Product Management Club (selected from 22 candidates).</li>
-        <li>Campus Ambassador at Robert Bosch Engineering (selected from 250+ peers at B.I.T).</li>
-      </ul>
-    </div>
+  <section id="contact" class="section bg-zinc-950 text-center">
+    <h2 class="text-4xl font-semibold text-white mb-5">Let's talk product.</h2>
+    <p class="text-gray-300 mb-8">Know a team working on interesting user problems? I'd love to connect.</p>
+    <a href="mailto:monisha.jobs2025@gmail.com" class="text-blue-300 underline break-all">monisha.jobs2025@gmail.com</a>
   </section>
 
   <!-- Footer -->
   <footer class="text-center py-10 text-gray-500 border-t border-gray-800">
-    <p>© 2025 Monisha Krishnamurthy • <a href="mailto:monisha.jobs2025@gmail.com" class="hover:underline text-gray-300">Contact</a></p>
+    <p>© 2026 Monisha Krishnamurthy • <a href="mailto:monisha.jobs2025@gmail.com" class="hover:underline text-gray-300">Contact</a></p>
   </footer>
 
   <script>
